@@ -1,5 +1,13 @@
-import pyautogui
+from pyautogui import scroll
+from keyboard  import add_hotkey as addHotkey
 
-pyautogui.middleClick(x=moveToX, y=moveToY)
+from time import sleep
 
-pyautogui.scroll(amount_to_scroll, x=moveToX, y=moveToY)
+
+def scrollUp   () : scroll( 100)
+def scrollDown () : scroll(-100)
+
+addHotkey('alt+up'  , scrollUp)
+addHotkey('alt+down', scrollDown)
+
+while 1 : pass
